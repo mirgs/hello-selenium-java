@@ -58,10 +58,12 @@ public class Test3robobarTest {
     vars.put("total", driver.findElement(By.cssSelector("tr:nth-child(4) > .ng-binding")).getText());
     System.out.println("total=" + vars.get("total").toString());
     assertEquals(vars.get("total").toString(), "€6.25");
+
     //driver.findElement(By.cssSelector(".btn-success")).click();
-     we = new WebDriverWait(driver, 10)
+     we = new WebDriverWait(driver, 5)
             .until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-success")));
-    we.click();
+     we.click();
+
     vars.put("total", driver.findElement(By.cssSelector(".ng-scope:nth-child(1) > .ng-binding:nth-child(4)")).getText());
     System.out.println("Roba Cola total=" + vars.get("total").toString());
     assertEquals(vars.get("total").toString(), "€1.25");
