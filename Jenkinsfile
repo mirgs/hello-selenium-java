@@ -8,7 +8,7 @@ pipeline {
     stages {
          stage('Setup') {
             steps {
-                git url:'http://10.250.10.2:8929/root/hello-selenium-java.git' branch: 'main'
+                git url:'http://10.250.10.2:8929/root/hello-selenium-java.git', branch: 'main'
             }
             post {
                 success {
