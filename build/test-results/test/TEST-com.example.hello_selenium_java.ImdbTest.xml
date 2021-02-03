@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.hello_selenium_java.ImdbTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-03T10:06:00" hostname="ubuntu" time="44.454">
+<testsuite name="com.example.hello_selenium_java.ImdbTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-03T10:38:32" hostname="ubuntu" time="35.036">
   <properties/>
-  <testcase name="imdb()" classname="com.example.hello_selenium_java.ImdbTest" time="44.454"/>
+  <testcase name="imdb()" classname="com.example.hello_selenium_java.ImdbTest" time="35.036"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[1612346762531	geckodriver	INFO	Listening on 127.0.0.1:15493
-1612346763756	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileg8iIy5"
+  <system-err><![CDATA[1612348714399	geckodriver	INFO	Listening on 127.0.0.1:17455
+1612348715419	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilecHgrdN"
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1612346771541	Marionette	INFO	Listening on port 43637
-1612346771736	Marionette	WARN	TLS certificate errors will be ignored for this session
-Feb 03, 2021 11:06:11 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+1612348722190	Marionette	INFO	Listening on port 40157
+1612348722389	Marionette	WARN	TLS certificate errors will be ignored for this session
+Feb 03, 2021 11:38:42 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1612346802881	Marionette	INFO	Stopped listening on port 43637
+1612348745376	Marionette	INFO	Stopped listening on port 40157
+JavaScript error: https://m.media-amazon.com/images/S/sash/wDqcPWN-$punknn.js, line 94: NS_ERROR_NOT_INITIALIZED: 
 
-###!!! [Child][MessageChannel] Error: (msgtype=0x3A00BE,name=PContent::Msg_StartVisitedQueries) Channel closing: too late to send/recv, messages will be lost
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
 ]]></system-err>
 </testsuite>
