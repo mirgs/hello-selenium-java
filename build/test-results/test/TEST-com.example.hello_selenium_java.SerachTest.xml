@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.hello_selenium_java.SerachTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-03T10:07:30" hostname="ubuntu" time="16.53">
+  <properties/>
+  <testcase name="searchdevops()" classname="com.example.hello_selenium_java.SerachTest" time="16.53"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1612346850742	geckodriver	INFO	Listening on 127.0.0.1:10393
+1612346850813	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJwJplh"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612346858076	Marionette	INFO	Listening on port 34991
+1612346858419	Marionette	WARN	TLS certificate errors will be ignored for this session
+Feb 03, 2021 11:07:38 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1612346865600	Marionette	INFO	Stopped listening on port 34991
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0144,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0144,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+]]></system-err>
+</testsuite>
