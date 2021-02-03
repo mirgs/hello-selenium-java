@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - SerachTest</title>
+<title>Test results - ImdbTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>SerachTest</h1>
+<h1>ImdbTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/com.example.hello_selenium_java.html">com.example.hello_selenium_java</a> &gt; SerachTest</div>
+<a href="../packages/com.example.hello_selenium_java.html">com.example.hello_selenium_java</a> &gt; ImdbTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">17.997s</div>
+<div class="counter">37.554s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,8 +78,8 @@
 </tr>
 </thead>
 <tr>
-<td class="success">searchdevops()</td>
-<td class="success">17.997s</td>
+<td class="success">imdb()</td>
+<td class="success">37.554s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,14 +87,20 @@
 <div id="tab1" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>1612365429768	geckodriver	INFO	Listening on 127.0.0.1:20318
-1612365429807	mozrunner::runner	INFO	Running command: &quot;/usr/lib/firefox/firefox&quot; &quot;--marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;/tmp/rust_mozprofile1H2w3l&quot;
+<pre>1612365348257	geckodriver	INFO	Listening on 127.0.0.1:7526
+1612365348914	mozrunner::runner	INFO	Running command: &quot;/usr/lib/firefox/firefox&quot; &quot;--marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;/tmp/rust_mozprofileP2louA&quot;
 console.warn: SearchSettings: &quot;get: No settings file exists, new profile?&quot; (new Error(&quot;&quot;, &quot;(unknown module)&quot;))
-1612365437612	Marionette	INFO	Listening on port 32973
-1612365437707	Marionette	WARN	TLS certificate errors will be ignored for this session
-Feb 03, 2021 4:17:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1612365355251	Marionette	INFO	Listening on port 37797
+1612365355481	Marionette	WARN	TLS certificate errors will be ignored for this session
+Feb 03, 2021 4:15:55 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1612365445363	Marionette	INFO	Stopped listening on port 32973
+1612365371406	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/&lt;@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612365381875	Marionette	INFO	Stopped listening on port 37797
+JavaScript error: https://m.media-amazon.com/images/S/sash/wDqcPWN-$punknn.js, line 94: NS_ERROR_NOT_INITIALIZED: 
 </pre>
 </span>
 </div>
