@@ -28,7 +28,7 @@ public class MainPageTest {
         open("https://www.jetbrains.com/");
     }
 
-    @Test
+    /*@Test
     public void search() {
         mainPage.searchButton.click();
 
@@ -36,21 +36,21 @@ public class MainPageTest {
         $(byXpath("//button[@type='submit' and text()='Search']")).click();
 
         $(byClassName("js-search-input")).shouldHave(attribute("value", "Selenium"));
-    }
+    }*/
 
-    @Test
+    /*@Test
     public void toolsMenu() {
         mainPage.toolsMenu.hover();
 
         $(byClassName("menu-main__popup-wrapper")).shouldBe(visible);
-    }
+    }*/
 
-    @Test
+    /*@Test
     public void navigationToAllTools() {
         mainPage.seeAllToolsButton.click();
 
         $(byClassName("products-list")).shouldBe(visible);
 
         assertEquals("All Developer Tools and Products by JetBrains", Selenide.title());
-    }
+    }*/
 }

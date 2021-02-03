@@ -1,0 +1,29 @@
+1612369141536	geckodriver	INFO	Listening on 127.0.0.1:12436
+1612369141605	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilekoFjqE"
+*** You are running in headless mode.
+
+(firefox:92896): GLib-GObject-WARNING **: 17:19:02.382: invalid (NULL) pointer instance
+
+(firefox:92896): GLib-GObject-CRITICAL **: 17:19:02.382: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:93159): GLib-GObject-WARNING **: 17:19:03.678: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:93159): GLib-GObject-CRITICAL **: 17:19:03.678: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:93196): GLib-GObject-WARNING **: 17:19:04.006: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:93196): GLib-GObject-CRITICAL **: 17:19:04.006: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:93278): GLib-GObject-WARNING **: 17:19:07.671: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:93278): GLib-GObject-CRITICAL **: 17:19:07.671: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+1612369147936	Marionette	INFO	Listening on port 42711
+1612369148024	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612369154513	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612369159756	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1612369264331	Marionette	INFO	Stopped listening on port 42711
