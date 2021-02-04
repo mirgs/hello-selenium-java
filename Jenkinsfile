@@ -16,17 +16,31 @@ pipeline {
                 }
             }
         }
-
+        
+        //Probar las pruebas, haciendo los waits en los test
         stage('Test') {
             steps {
                 withGradle {
                     sh './gradlew clean test'
-                    sh './gradlew test jacocoTestReport'
+                    sh './gradlew -Dgeb.env=firefoxHeadless iT'
+                    sh './gradlew codenarcTest'
+
                 }
             }
             post {
                 always {
                     junit 'build/test-results/test/TEST-*.xml'
+                    publishHTML (
+                        target: [
+                            allowMissing : false,
+                            alwaysLinkToLastBuild : false,
+                            keepAll : true,
+                            reportDir: "build/reports/codenarc",
+                            reportFiles: "*.html",
+                            reportName : "Codenarc Report"
+                        ]
+                    )
+
                 }
             }
         }  
