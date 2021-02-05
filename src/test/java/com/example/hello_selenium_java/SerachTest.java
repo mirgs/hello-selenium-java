@@ -49,7 +49,7 @@ public class SerachTest {
         driver.findElement(By.cssSelector("#introAgreeButton .RveJvd")).click();
         driver.switchTo().defaultContent();
         //driver.findElement(By.name("q")).click();
-        WebElement we = new WebDriverWait(driver, 15)
+        WebElement we = new WebDriverWait(driver, 20)
                 .until(ExpectedConditions.elementToBeClickable(By.name("q")));
         we.click();
         driver.findElement(By.name("q")).sendKeys("devops");
