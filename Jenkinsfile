@@ -10,11 +10,11 @@ pipeline {
             steps {
                 git url:'http://10.250.10.2:8929/root/hello-selenium-java.git', branch: 'main'
             }
-            post {
+            /*post {
                 success {
                     archiveArtifacts 'build/libs/*.jar'
                 }
-            }
+            }*/
         }
         
         //Probar las pruebas, haciendo los waits en los test
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 withGradle {
                     sh './gradlew clean test'
-                    sh './gradlew -Dgeb.env=firefoxHeadless iT'
+                    //sh './gradlew -Dgeb.env=firefoxHeadless iT'
                     sh './gradlew codenarcTest'
 
                 }
