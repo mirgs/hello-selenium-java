@@ -22,7 +22,7 @@ pipeline {
             steps {
                 withGradle {
                     sh './gradlew clean test'
-                    sh './gradlew -Dgeb.env=firefoxHeadless iT'
+                    //sh './gradlew -Dgeb.env=firefoxHeadless iT'
                     sh './gradlew codenarcTest'
 
                 }
