@@ -23,14 +23,14 @@ pipeline {
                 withGradle {
                     sh './gradlew clean test'
                     //sh './gradlew -Dgeb.env=firefoxHeadless iT'
-                    sh './gradlew codenarcTest'
+                    //sh './gradlew codenarcTest'
 
                 }
             }
             post {
                 always {
                     junit 'build/test-results/test/TEST-*.xml'
-                    publishHTML (
+                    /*publishHTML (
                         target: [
                             allowMissing : false,
                             alwaysLinkToLastBuild : false,
@@ -39,7 +39,7 @@ pipeline {
                             reportFiles: "*.html",
                             reportName : "Codenarc Report"
                         ]
-                    )
+                    )*/
 
                 }
             }
