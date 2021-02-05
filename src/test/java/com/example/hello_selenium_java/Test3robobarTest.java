@@ -50,7 +50,7 @@ public class Test3robobarTest {
         driver.manage().window().setSize(new Dimension(907, 886));
 
         //driver.findElement(By.cssSelector(".ng-scope:nth-child(1) > td .input-group-append > .btn")).click();
-        WebElement we = new WebDriverWait(driver, 10)
+        WebElement we = new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(By.cssSelector(".ng-scope:nth-child(1) > td .input-group-append > .btn")));
         we.click();
         vars.put("total", driver.findElement(By.cssSelector("tr:nth-child(4) > .ng-binding")).getText());

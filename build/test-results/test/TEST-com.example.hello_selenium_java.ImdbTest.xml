@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.hello_selenium_java.ImdbTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T09:53:32" hostname="ubuntu" time="94.866">
+  <properties/>
+  <testcase name="imdb()" classname="com.example.hello_selenium_java.ImdbTest" time="94.866"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1612518825500	geckodriver	INFO	Listening on 127.0.0.1:5599
+1612518832393	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileeoKbik"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612518848509	Marionette	INFO	Listening on port 35147
+1612518848747	Marionette	WARN	TLS certificate errors will be ignored for this session
+Feb 05, 2021 10:54:09 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1612518886765	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612518897036	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612518903508	Marionette	INFO	Stopped listening on port 35147
+JavaScript error: https://m.media-amazon.com/images/S/sash/wDqcPWN-$punknn.js, line 94: NS_ERROR_NOT_INITIALIZED: 
+]]></system-err>
+</testsuite>

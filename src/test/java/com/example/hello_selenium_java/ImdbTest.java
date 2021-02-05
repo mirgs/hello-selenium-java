@@ -44,7 +44,7 @@ public class ImdbTest {
     driver.manage().window().setSize(new Dimension(907, 886));
     driver.findElement(By.id("suggestion-search")).sendKeys("wandavision");
     driver.findElement(By.id("suggestion-search")).sendKeys(Keys.ENTER);
-    WebElement we = new WebDriverWait(driver, 15)
+    WebElement we = new WebDriverWait(driver, 10)
             .until(ExpectedConditions.elementToBeClickable(By.linkText("WandaVision")));
     we.click();
     //driver.findElement(By.linkText("WandaVision")).click();
