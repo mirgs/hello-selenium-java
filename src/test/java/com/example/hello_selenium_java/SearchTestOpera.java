@@ -26,7 +26,9 @@ public class SearchTestOpera {
     JavascriptExecutor js;
 
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws MalformedURLException {
+        OperaOptions operaxOptions = new OperaOptions();
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), operaxOptions);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
@@ -37,10 +39,7 @@ public class SearchTestOpera {
     }
 
     @Test
-    public void searchdevops() throws MalformedURLException {
-
-        OperaOptions operaxOptions = new OperaOptions();
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), operaxOptions);
+    public void searchdevops()  {
 
         driver.get("https://www.google.com/");
         driver.manage().window().setSize(new Dimension(904, 893));

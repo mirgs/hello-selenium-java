@@ -23,7 +23,9 @@ public class TestRobobarOpera {
     JavascriptExecutor js;
 
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws MalformedURLException {
+        OperaOptions operaOptions = new OperaOptions();
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), operaOptions);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
@@ -34,10 +36,7 @@ public class TestRobobarOpera {
     }
 
     @Test
-    public void test3robobar() throws MalformedURLException {
-
-        OperaOptions operaOptions = new OperaOptions();
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), operaOptions);
+    public void test3robobar() {
 
         driver.get("http://10.250.10.2:3000/");
         driver.manage().window().setSize(new Dimension(907, 886));

@@ -23,7 +23,9 @@ public class TestRobobarChrome {
     JavascriptExecutor js;
 
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws MalformedURLException {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), chromeOptions);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
@@ -34,10 +36,7 @@ public class TestRobobarChrome {
     }
 
     @Test
-    public void test3robobar() throws MalformedURLException {
-
-        ChromeOptions chromeOptions = new ChromeOptions();
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), chromeOptions);
+    public void test3robobar()  {
 
         driver.get("http://10.250.10.2:3000/");
         driver.manage().window().setSize(new Dimension(907, 886));

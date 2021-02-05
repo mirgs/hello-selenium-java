@@ -20,9 +20,9 @@ public class ImdbTestRemoteFirefox {
     private Map<String, Object> vars;
     JavascriptExecutor js;
     @BeforeEach
-    public void setUp() {
-        //driver = new ChromeDriver();
-        //driver = new FirefoxDriver();
+    public void setUp() throws MalformedURLException {
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), firefoxOptions);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
@@ -31,10 +31,8 @@ public class ImdbTestRemoteFirefox {
         driver.quit();
     }
     @Test
-    public void imdb() throws MalformedURLException{
+    public void imdb() {
 
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), firefoxOptions);
         driver.get("https://www.imdb.com/");
         driver.manage().window().setSize(new Dimension(907, 886));
         driver.findElement(By.id("suggestion-search")).sendKeys("wandavision");

@@ -20,7 +20,9 @@ public class ImdbTestRemoteOpera {
     private Map<String, Object> vars;
     JavascriptExecutor js;
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws MalformedURLException {
+        OperaOptions operaOptions = new OperaOptions();
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), operaOptions);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
@@ -29,10 +31,8 @@ public class ImdbTestRemoteOpera {
         driver.quit();
     }
     @Test
-    public void imdb() throws MalformedURLException{
+    public void imdb() {
 
-        OperaOptions operaOptions = new OperaOptions();
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), operaOptions);
         driver.get("https://www.imdb.com/");
         driver.manage().window().setSize(new Dimension(907, 886));
         driver.findElement(By.id("suggestion-search")).sendKeys("wandavision");

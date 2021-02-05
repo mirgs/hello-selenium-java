@@ -23,9 +23,13 @@ public class TestRobobarFiirefox {
     JavascriptExecutor js;
 
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws MalformedURLException {
+
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), firefoxOptions);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
+
     }
 
     @AfterEach
@@ -34,10 +38,7 @@ public class TestRobobarFiirefox {
     }
 
     @Test
-    public void test3robobar() throws MalformedURLException {
-
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), firefoxOptions);
+    public void test3robobar() {
 
         driver.get("http://10.250.10.2:3000/");
         driver.manage().window().setSize(new Dimension(907, 886));

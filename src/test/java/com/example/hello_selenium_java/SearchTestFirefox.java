@@ -25,7 +25,9 @@ public class SearchTestFirefox {
     JavascriptExecutor js;
 
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws MalformedURLException {
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), firefoxOptions);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
@@ -36,10 +38,7 @@ public class SearchTestFirefox {
     }
 
     @Test
-    public void searchdevops() throws MalformedURLException {
-
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), firefoxOptions);
+    public void searchdevops() {
 
         driver.get("https://www.google.com/");
         driver.manage().window().setSize(new Dimension(904, 893));
