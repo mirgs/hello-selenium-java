@@ -12,6 +12,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import java.util.*;
 import java.net.MalformedURLException;
+
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+
 public class ImdbTestRemoteChrome {
     private WebDriver driver;
     private String browser;
@@ -30,7 +34,6 @@ public class ImdbTestRemoteChrome {
     public void tearDown() {
         driver.quit();
     }
-    
     @Test
     public void imdb() {
 
