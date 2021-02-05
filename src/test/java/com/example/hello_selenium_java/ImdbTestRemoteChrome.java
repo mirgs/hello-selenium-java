@@ -4,8 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,18 +12,24 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import java.util.*;
 import java.net.MalformedURLException;
-import java.net.URL;
+
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+
 public class ImdbTestRemoteChrome {
     private WebDriver driver;
+    private String browser;
     private Map<String, Object> vars;
     JavascriptExecutor js;
+
     @BeforeEach
     public void setUp() throws MalformedURLException {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), chromeOptions);
+        open("about:blank");
+        driver = getWebDriver();
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
+
     @AfterEach
     public void tearDown() {
         driver.quit();
