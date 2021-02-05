@@ -4,7 +4,7 @@ pipeline {
     tools {
         jdk 'OpenJDK-15.0.2'
     }
-    enviroment {
+    environment {
         SERVER = 'http://10.250.10.2:4444'
         BROWSER = 'firefox'
         HEADLESS_VALUE = 'false'
