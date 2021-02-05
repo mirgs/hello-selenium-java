@@ -4,42 +4,33 @@ pipeline {
     tools {
         jdk 'OpenJDK-15.0.2'
     }
+    enviroment {
+        SERVER = 'http://10.250.10.2:4444'
+        BROWSER = 'firefox'
+        HEADLESS_VALUE = 'false'
+    }
 
     stages {
          stage('Setup') {
             steps {
                 git url:'http://10.250.10.2:8929/root/hello-selenium-java.git', branch: 'main'
             }
-            /*post {
-                success {
-                    archiveArtifacts 'build/libs/*.jar'
-                }
-            }*/
         }
         
         //Probar las pruebas, haciendo los waits en los test
         stage('Test') {
             steps {
                 withGradle {
-                    sh './gradlew clean test'
-                    //sh './gradlew -Dgeb.env=firefoxHeadless iT'
-                    //sh './gradlew codenarcTest'
+                    //sh './gradlew test -Premote_server=${SERVER} -Pbrowser=${BROWSER} -Pheadless=${HEADLESS_VALUE}'
+                    sh './gradlew test -Premote_server=${SERVER} -Pbrowser=firefox -Pheadless=${HEADLESS_VALUE}'
+                    sh './gradlew test -Premote_server=${SERVER} -Pbrowser=chrome -Pheadless=${HEADLESS_VALUE}'
+                    sh './gradlew test -Premote_server=${SERVER} -Pbrowser=opera -Pheadless=${HEADLESS_VALUE}'
 
                 }
             }
             post {
                 always {
                     junit 'build/test-results/test/TEST-*.xml'
-                    /*publishHTML (
-                        target: [
-                            allowMissing : false,
-                            alwaysLinkToLastBuild : false,
-                            keepAll : true,
-                            reportDir: "build/reports/codenarc",
-                            reportFiles: "*.html",
-                            reportName : "Codenarc Report"
-                        ]
-                    )*/
 
                 }
             }
