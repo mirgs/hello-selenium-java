@@ -48,8 +48,8 @@ public class ImdbTest {
     wait.until(ExpectedConditions.elementToBeClickable(By.linkText("WandaVision")));
     driver.findElement(By.id("suggestion-search")).click();
 
-    wait = new WebDriverWait(driver, 15)
-            .until(ExpectedConditions.elementToBeClickable(By.linkText("TRIVIA")));
-    wait.click();
+    wait = new WebDriverWait(driver, 15);
+    wait.until(ExpectedConditions.elementToBeClickable(By.linkText("TRIVIA")));
+    driver.findElement(By.id("suggestion-search")).click();
   }
 }
