@@ -44,10 +44,13 @@ public class SearchTestChrome {
         driver.get("https://www.google.com/");
         driver.manage().window().setSize(new Dimension(904, 893));
         driver.switchTo().frame(0);
-        driver.findElement(By.cssSelector("#introAgreeButton .RveJvd")).click();
+        //driver.findElement(By.cssSelector("#introAgreeButton .RveJvd")).click();
+        WebElement we = new WebDriverWait(driver, 10)
+                .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#introAgreeButton .RveJvd")));
+        we.click();
         driver.switchTo().defaultContent();
         //driver.findElement(By.name("q")).click();
-        WebElement we = new WebDriverWait(driver, 10)
+        we = new WebDriverWait(driver, 10)
                 .until(ExpectedConditions.elementToBeClickable(By.name("q")));
         we.click();
         driver.findElement(By.name("q")).sendKeys("devops");
