@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.hello_selenium_java.ImdbTestRemoteChrome" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T10:00:19" hostname="ubuntu" time="119.527">
+<testsuite name="com.example.hello_selenium_java.ImdbTestRemoteChrome" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T12:54:06" hostname="ubuntu" time="33.212">
   <properties/>
-  <testcase name="imdb()" classname="com.example.hello_selenium_java.ImdbTestRemoteChrome" time="119.527"/>
+  <testcase name="imdb()" classname="com.example.hello_selenium_java.ImdbTestRemoteChrome" time="33.212"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Feb 05, 2021 11:00:34 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+  <system-err><![CDATA[Feb 05, 2021 1:54:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

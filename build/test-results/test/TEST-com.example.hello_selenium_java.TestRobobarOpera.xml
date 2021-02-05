@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.hello_selenium_java.TestRobobarOpera" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T09:59:36" hostname="ubuntu" time="41.589">
+<testsuite name="com.example.hello_selenium_java.TestRobobarOpera" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T12:53:57" hostname="ubuntu" time="8.818">
   <properties/>
-  <testcase name="test3robobar()" classname="com.example.hello_selenium_java.TestRobobarOpera" time="41.589"/>
+  <testcase name="test3robobar()" classname="com.example.hello_selenium_java.TestRobobarOpera" time="8.818"/>
   <system-out><![CDATA[total=€1.25
 total=€3.25
 total=€6.25
@@ -9,7 +9,7 @@ Roba Cola total=€1.25
 Robo Beer total=€2.00
 Rob Wine total=€3.00
 ]]></system-out>
-  <system-err><![CDATA[Feb 05, 2021 11:00:03 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+  <system-err><![CDATA[Feb 05, 2021 1:54:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: OSS
 ]]></system-err>
 </testsuite>
