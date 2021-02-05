@@ -17,6 +17,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 public class ImdbTestRemoteChrome {
     private WebDriver driver;
+    private String browser;
     private Map<String, Object> vars;
     JavascriptExecutor js;
 
