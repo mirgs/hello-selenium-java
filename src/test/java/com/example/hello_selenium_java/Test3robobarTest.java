@@ -66,7 +66,7 @@ public class Test3robobarTest {
         assertEquals(vars.get("total").toString(), "€6.25");
 
         //driver.findElement(By.cssSelector(".btn-success")).click();
-        we = new WebDriverWait(driver, 20)
+        we = new WebDriverWait(driver, 5)
             .until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn-success")));
         we.click();
 
