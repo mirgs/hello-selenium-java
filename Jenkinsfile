@@ -21,10 +21,14 @@ pipeline {
         stage('Test') {
             steps {
                 withGradle {
-                    sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=${BROWSER} -Pheadless=${HEADLESS_VALUE}'
+                    //sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=${BROWSER} -Pheadless=${HEADLESS_VALUE}'
                     //sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=firefox -Pheadless=${HEADLESS_VALUE}'
                     //sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=chrome -Pheadless=${HEADLESS_VALUE}'
                     //sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=opera -Pheadless=${HEADLESS_VALUE}'
+                    sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=${BROWSER} -Pheadless=${HEADLESS_VALUE}'
+                    sh './gradlew checkstyleMain -Premote_server=${SERVER} -Pbrowser=${BROWSER} -Pheadless=${HEADLESS_VALUE}'
+                    sh './gradlew checkstyleTest -Premote_server=${SERVER} -Pbrowser=${BROWSER} -Pheadless=${HEADLESS_VALUE}'
+                    
 
                 }
             }
@@ -33,8 +37,18 @@ pipeline {
                     junit 'build/test-results/test/TEST-*.xml'
                     recordIssues(
                         enabledForFailure: true, aggregatingResults: true, 
-                        tools: [java(), checkStyle(pattern: 'checkstyle-result.xml', reportEncoding: 'UTF-8')]
+                        tools: [java(), checkStyle(pattern: 'build/reports/checkstyle/*.xml', reportEncoding: 'UTF-8')]
                     )
+                    publishHTML (target: [
+                        reportDir: 'build/reports/checkstyle/',
+                        reportFiles: 'main.html',
+                        reportName: "Reporte Checkstyle"
+                    ])
+                    publishHTML (target: [
+                        reportDir: 'build/reports/checkstyle/',
+                        reportFiles: 'test.html',
+                        reportName: "Reporte Checkstyle"
+                    ])
 
                 }
             }
