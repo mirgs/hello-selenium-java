@@ -1,0 +1,6 @@
+com/example/hello_selenium_java/ImdbTestRemoteChrome.java
+ com.example.hello_selenium_java.ImdbTestRemoteChrome
+com/example/hello_selenium_java/SearchTestChrome.java
+ com.example.hello_selenium_java.SearchTestChrome
+com/example/hello_selenium_java/TestRobobarChrome.java
+ com.example.hello_selenium_java.TestRobobarChrome
