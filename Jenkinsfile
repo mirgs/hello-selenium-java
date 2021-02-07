@@ -31,6 +31,10 @@ pipeline {
             post {
                 always {
                     junit 'build/test-results/test/TEST-*.xml'
+                    recordIssues(
+                        enabledForFailure: true, aggregatingResults: true, 
+                        tools: [java(), checkStyle(pattern: 'checkstyle-result.xml', reportEncoding: 'UTF-8')]
+                    )
 
                 }
             }
