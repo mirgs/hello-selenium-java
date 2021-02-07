@@ -21,16 +21,20 @@ pipeline {
         stage('Test') {
             steps {
                 withGradle {
-                    sh './gradlew test -Premote_server=${SERVER} -Pbrowser=${BROWSER} -Pheadless=${HEADLESS_VALUE}'
-                    //sh './gradlew test -Premote_server=${SERVER} -Pbrowser=firefox -Pheadless=${HEADLESS_VALUE}'
-                    //sh './gradlew test -Premote_server=${SERVER} -Pbrowser=chrome -Pheadless=${HEADLESS_VALUE}'
-                    //sh './gradlew test -Premote_server=${SERVER} -Pbrowser=opera -Pheadless=${HEADLESS_VALUE}'
+                    sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=${BROWSER} -Pheadless=${HEADLESS_VALUE}'
+                    //sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=firefox -Pheadless=${HEADLESS_VALUE}'
+                    //sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=chrome -Pheadless=${HEADLESS_VALUE}'
+                    //sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=opera -Pheadless=${HEADLESS_VALUE}'
 
                 }
             }
             post {
                 always {
                     junit 'build/test-results/test/TEST-*.xml'
+                    recordIssues(
+                        enabledForFailure: true, aggregatingResults: true, 
+                        tools: [java(), checkStyle(pattern: 'checkstyle-result.xml', reportEncoding: 'UTF-8')]
+                    )
 
                 }
             }
@@ -38,3 +42,4 @@ pipeline {
         
     }
 }
+
